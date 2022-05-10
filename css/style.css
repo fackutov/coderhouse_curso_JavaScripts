@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background-color: #b9ad93;
+}
+.body main .divProductosClass {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.body main .divProductosClass .producto {
+  height: 480px;
+  width: 250px;
+  align-items: center;
+  background-color: #c09e54;
+  padding: 3px;
+  border-radius: 15px;
+  margin: 2px;
+}
+.body main .divProductosClass .producto p {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+.body main .divProductosClass .producto .nombreProd {
+  font-size: 25px;
+  color: #ffffff;
+  font-family: monospace;
+}
+.body main .divProductosClass .producto img {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+}
+
+.body header {
+  background-color: #00c2b8;
+  height: 120px;
+}
+.body header nav p {
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  color: #940101;
+}
+
+/*# sourceMappingURL=style.css.map */
