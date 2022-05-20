@@ -39,7 +39,6 @@ let productos = [prod_1, prod_2, prod_3, prod_4, prod_5, prod_6, prod_7, prod_8,
 
 let divProductos = document.getElementById('divProductos')
 
-
 productos.forEach(prod => {
     divProductos.innerHTML += `
         <div id=producto${prod.id} class="producto">
@@ -48,6 +47,7 @@ productos.forEach(prod => {
             <P class="universoProd">${prod.universo}</P>
             <P class="medidasProd">medidas <br>${prod.tamanio}</P>
             <p class="precioProd">$ ${prod.precio}</p>
+            <button onclick='agregar(${prod.id})' class='botonCompra'>Comprar</button>
         </div>
     `
 })
@@ -65,6 +65,7 @@ btn1.addEventListener('click', () => {
                 <P class="universoProd">${prod.universo}</P>
                 <P class="medidasProd">medidas <br>${prod.tamanio}</P>
                 <p class="precioProd">$ ${prod.precio}</p>
+                <button onclick='agregar(${prod.id})' class='botonCompra'>Comprar</button>
             </div>
         `
 })})
@@ -82,6 +83,7 @@ btn2.addEventListener('click', () => {
                 <P class="universoProd">${prod.universo}</P>
                 <P class="medidasProd">medidas <br>${prod.tamanio}</P>
                 <p class="precioProd">$ ${prod.precio}</p>
+                <button onclick='agregar(${prod.id})' class='botonCompra'>Comprar</button>
             </div>
         `
 })})
@@ -98,6 +100,7 @@ btn3.addEventListener('click', () => {
                 <P class="universoProd">${prod.universo}</P>
                 <P class="medidasProd">medidas <br>${prod.tamanio}</P>
                 <p class="precioProd">$ ${prod.precio}</p>
+                <button onclick='agregar(${prod.id})' class='botonCompra'>Comprar</button>
             </div>
         `
 })})
@@ -114,8 +117,10 @@ btn4.addEventListener('click', () => {
                 <P class="universoProd">${prod.universo}</P>
                 <P class="medidasProd">medidas <br>${prod.tamanio}</P>
                 <p class="precioProd">$ ${prod.precio}</p>
+                <button onclick='agregar(${prod.id})' class='botonCompra'>Comprar</button>
             </div>
         `
+
 })})
 
 btn5.addEventListener('click', () => {
@@ -130,6 +135,7 @@ btn5.addEventListener('click', () => {
                 <P class="universoProd">${prod.universo}</P>
                 <P class="medidasProd">medidas <br>${prod.tamanio}</P>
                 <p class="precioProd">$ ${prod.precio}</p>
+                <button onclick='agregar(${prod.id})' class='botonCompra'>Comprar</button>
             </div>
         `
 })})
@@ -146,6 +152,42 @@ btn6.addEventListener('click', () => {
                 <P class="universoProd">${prod.universo}</P>
                 <P class="medidasProd">medidas <br>${prod.tamanio}</P>
                 <p class="precioProd">$ ${prod.precio}</p>
+                <button onclick='agregar(${prod.id})' class='botonCompra'>Comprar</button>
             </div>
         `
 })})
+
+// CARRITO
+
+let numCarrito = document.getElementById('numCarrito')
+
+// Agrega el numero al icono de carrito segun la cantidad de elementos que haya en el local storage
+function agregarNum() {
+    cantidad = agregarStorage()
+    numCarrito.innerHTML = `
+    ${cantidad.length}
+`
+}
+
+
+
+function agregarStorage (){
+    return JSON.parse(localStorage.getItem('carrito')) || []
+}
+
+function guardarStorage (arraycarrito){
+    localStorage.setItem('carrito', JSON.stringify(arraycarrito))    
+}
+
+function agregar(idprod){
+    let carrito = agregarStorage()
+    let prodEncontrado = productos.find(p => p.id == idprod)
+    carrito.push(prodEncontrado)
+    guardarStorage(carrito)
+    console.log(carrito)
+
+    agregarNum(carrito)
+}
+
+agregarNum()
+

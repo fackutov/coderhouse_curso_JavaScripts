@@ -2,13 +2,59 @@
 .body {
     header{
         grid-area: header;
-        background-color: rgb(0, 194, 184);
+        background-color: aquamarine;
         height: 120px;
         p{
             text-align: center;
             padding: 20px;
             font-size: 60px;
-            color: rgb(148, 1, 1);
+            color: rgb(158, 47, 47);
+        }
+    }
+    .navbar{
+        grid-area: navbar;
+        background-color: aquamarine;
+        padding: 25px;
+        .navegacion{
+            display: flex;
+            justify-content: space-around;
+            .botones{
+                display: flex;
+                align-items: center;
+                margin-left: 200px;
+                .boton{
+                    padding: 5px;
+                    color: #1a9ef7;
+                    border: 0;
+                    border-radius: 10px;
+                    font-size: 18px;
+                    margin: 10px;
+                    &:hover{
+                        color: #3b3bff;
+                    }
+                }
+            }
+            .carrito{
+                display: flex;
+                width: 50px;
+                height: 40px;
+                border-radius: 10px;
+                border: 2px solid #8bdfdf;
+                padding: 0px 10px 0px 10px;
+                align-items: center;
+                &:hover {
+                    background-color: #bef8f8;
+                    border: 2px solid #5f787c;
+                    transform: scale(0.9);
+                }
+                .imgCarrito{
+                    background-image: url(../../multimedia/imagenes/iconos/carrito.png);
+                    background-size: cover;
+                    background-position: center;
+                    width: 30px;
+                    height: 40px;
+                }
+            }
         }
     }
 }
