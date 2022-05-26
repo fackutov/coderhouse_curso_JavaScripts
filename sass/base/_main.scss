@@ -16,34 +16,16 @@ html{
         background-color: #b4a98f;
         display: grid;
         grid-template: 
-            "header     header" 100px
-            "navbar     navbar" 100px
-            "aside      main"   auto
-            "footer     footer" 150px/
-              20%       auto;
-        .aside{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            grid-area: aside;
-            background-color: #68a5a7;
-            padding-top: 100px;
-            .boton{
-                padding: 5px;
-                color: #1a9ef7;
-                border: 0;
-                border-radius: 10px;
-                font-size: 18px;
-                margin: 10px;
-                &:hover{
-                    color: #3b3bff;
-                }
-            }
-        }
+            "header " 100px
+            "navbar " 100px
+            "main " auto
+            "footer " 150px/
+              auto;
         main{
             grid-area: main;
             .divProductosClass{
                 display: flex;
+                justify-content: space-evenly;
                 padding: 20px;
                 flex-wrap: wrap;
                 .producto{
@@ -68,12 +50,56 @@ html{
                     }
                     .botonCompra{
                         width: 60%;
-                        background-color: rgb(255, 212, 71);
+                        background-color: #ffd447;
+                        color: #ffffff;
                         padding: 10px;
                         border-radius: 15px;
                         border: 0px;
                         margin-left: 20%;
                         margin-right: 20%;
+                        &:hover{
+                            background-color: #f8e7ae;
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .divCarrito{
+                background-color: #ffffff;
+                padding: 30px;
+                text-align: center;
+                .infoCarrito{
+                    padding: 15px;
+                    margin-right: 20%;
+                    text-align: end;
+                }
+                .divCarritoClass{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+                    .prodCarrito{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 5px;
+                        background-color: aquamarine;
+                        border-radius: 15px;
+                        margin: 10px;
+                        margin-left: 20%;
+                        margin-right: 20%;
+                        p{
+                            padding: 2px;
+                        }
+                        .imgProd{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 10px;
+                            padding: 10px;
+                        }
+                        .btnCompra{
+                            display: flex;
+                            flex-direction: column;
+                        }
                     }
                 }
             }

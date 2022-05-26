@@ -14,32 +14,14 @@ html {
 html .body {
   background-color: #b4a98f;
   display: grid;
-  grid-template: "header     header" 100px "navbar     navbar" 100px "aside      main" auto "footer     footer" 150px/20% auto;
-}
-html .body .aside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: aside;
-  background-color: #68a5a7;
-  padding-top: 100px;
-}
-html .body .aside .boton {
-  padding: 5px;
-  color: #1a9ef7;
-  border: 0;
-  border-radius: 10px;
-  font-size: 18px;
-  margin: 10px;
-}
-html .body .aside .boton:hover {
-  color: #3b3bff;
+  grid-template: "header " 100px "navbar " 100px "main " auto "footer " 150px/auto;
 }
 html .body main {
   grid-area: main;
 }
 html .body main .divProductosClass {
   display: flex;
+  justify-content: space-evenly;
   padding: 20px;
   flex-wrap: wrap;
 }
@@ -67,11 +49,55 @@ html .body main .divProductosClass .producto img {
 html .body main .divProductosClass .producto .botonCompra {
   width: 60%;
   background-color: #ffd447;
+  color: #ffffff;
   padding: 10px;
   border-radius: 15px;
   border: 0px;
   margin-left: 20%;
   margin-right: 20%;
+}
+html .body main .divProductosClass .producto .botonCompra:hover {
+  background-color: #f8e7ae;
+  color: black;
+}
+html .body main .divCarrito {
+  background-color: #ffffff;
+  padding: 30px;
+  text-align: center;
+}
+html .body main .divCarrito .infoCarrito {
+  padding: 15px;
+  margin-right: 20%;
+  text-align: end;
+}
+html .body main .divCarrito .divCarritoClass {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: aquamarine;
+  border-radius: 15px;
+  margin: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito p {
+  padding: 2px;
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito .imgProd {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 10px;
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra {
+  display: flex;
+  flex-direction: column;
 }
 
 .body header {
@@ -96,6 +122,7 @@ html .body main .divProductosClass .producto .botonCompra {
 }
 .body .navbar .navegacion .botones {
   display: flex;
+  padding-left: 250px;
   align-items: center;
   margin-left: 200px;
 }

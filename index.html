@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CosmosZone - Tienda Online</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body class="body">
     
@@ -16,30 +17,37 @@
     <nav class="navbar">
         <div class="navegacion">
             <div class="botones">
-                <button class="boton" id="btn3">Productos Pokemon</button>
-                <button class="boton" id="btn4">Productos Marvel</button>
-                <button class="boton" id="btn5">Productos League of legends</button>
-                <button class="boton" id="btn6">Productos Rubik</button>
+                <button class="boton" id="btnAll">Inicio</button>
+                <button class="boton" id="btn1">Pokemon</button>
+                <button class="boton" id="btn2">Marvel</button>
+                <button class="boton" id="btn3">League of legends</button>
+                <button class="boton" id="btn4">Rubik</button>
             </div>
             <div class="carrito">
-                <a class="imgCarrito" href="carrito.html" target="_blank"></a>
+                <a class="imgCarrito" href="#carrito"></a>
                 <h2 id="numCarrito"></h2>
             </div>
         </div>     
     </nav>
-
-    <aside class="aside">
-        <button class="boton" id="btn1">Precio de menor a mayor</button>
-        <button class="boton" id="btn2">Precio de mayor a menor</button>
-    </aside>
-
     <main class="main">
         <div id="divProductos" class="divProductosClass"></div>
+
+        <div class="divCarrito" id="carrito">
+            <h2>Carrito de compras</h2>
+            <div class="infoCarrito">
+                <div id="totalCarrito"></div>
+                <button onclick='eliminarCarrito()'>Eliminar todos los articulos</button>
+            </div>
+            <div id="divCarrito" class="divCarritoClass"></div>
+            
+        </div>
     </main>
 
     <footer class="footer">
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
     <script src="javascripts/scripts.js"></script>
 </body>
 </html>
