@@ -17,34 +17,21 @@
     <nav class="navbar">
         <div class="navegacion">
             <div class="botones">
-                <button class="boton" id="btnAll">Inicio</button>
+                <button class="boton" id="btnAll">Home</button>
                 <button class="boton" id="btn1">Pokemon</button>
                 <button class="boton" id="btn2">Marvel</button>
                 <button class="boton" id="btn3">League of legends</button>
-                <button class="boton" id="btn4">Rubik</button>
             </div>
-            <div class="carrito">
-                <a class="imgCarrito" href="#carrito"></a>
+            <div class="carrito" onclick="mostrarCarrito()">
+                <a class="imgCarrito"></a>
                 <h2 id="numCarrito"></h2>
             </div>
         </div>     
     </nav>
-    <main class="main">
-        <div id="divProductos" class="divProductosClass"></div>
+    
+    <main id="main" class="main"></main>
 
-        <div class="divCarrito" id="carrito">
-            <h2>Carrito de compras</h2>
-            <div class="infoCarrito">
-                <div id="totalCarrito"></div>
-                <button onclick='eliminarCarrito()'>Eliminar todos los articulos</button>
-            </div>
-            <div id="divCarrito" class="divCarritoClass"></div>
-            
-        </div>
-    </main>
-
-    <footer class="footer">
-    </footer>
+    <footer class="footer"></footer>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>

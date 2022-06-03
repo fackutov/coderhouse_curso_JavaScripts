@@ -147,7 +147,6 @@ html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra {
   align-items: center;
 }
 .body .navbar .navegacion .carrito:hover {
-  background-color: #bef8f8;
   border: 2px solid #5f787c;
   transform: scale(0.9);
 }
@@ -155,8 +154,13 @@ html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra {
   background-image: url(../../multimedia/imagenes/iconos/carrito.png);
   background-size: cover;
   background-position: center;
+  background-color: aquamarine;
+  border: 0;
   width: 30px;
   height: 40px;
+}
+.body .navbar .navegacion .carrito h2 {
+  padding-left: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

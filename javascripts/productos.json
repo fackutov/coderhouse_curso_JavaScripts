@@ -1,0 +1,84 @@
+
+[
+    {
+        "id": 1, 
+        "tipo": "Figura", 
+        "nombre": "bulbasaur", 
+        "universo": "Pokemon", 
+        "tamanio": "10 x 10 x 10",
+        "precio": 900, 
+        "stock": 5
+    },
+    {
+        "id": 2, 
+        "tipo": "Figura", 
+        "nombre": "charmander", 
+        "universo": "Pokemon", 
+        "tamanio": "10 x 10 x 10",
+        "precio": 900, 
+        "stock": 7
+    },
+    {
+        "id": 3, 
+        "tipo": "Figura", 
+        "nombre": "squirtle", 
+        "universo": "Pokemon", 
+        "tamanio": "10 x 10 x 10",
+        "precio": 900, 
+        "stock": 12
+    },
+    {
+        "id": 4, 
+        "tipo": "Figura", 
+        "nombre": "spiderman", 
+        "universo": "Marvel", 
+        "tamanio": "9 x 12 x 12",
+        "precio": 400, 
+        "stock": 3
+    },
+    {
+        "id": 5, 
+        "tipo": "Figura", 
+        "nombre": "ironman", 
+        "universo": "Marvel", 
+        "tamanio": "8 x 7 x 7",
+        "precio": 300, 
+        "stock": 10
+    },
+    {
+        "id": 6, 
+        "tipo": "Figura", 
+        "nombre": "spider-ham", 
+        "universo": "Marvel", 
+        "tamanio": "8 x 7 x 7",
+        "precio": 300, 
+        "stock": 1
+    },
+    {
+        "id": 7, 
+        "tipo": "Figura", 
+        "nombre": "vi", 
+        "universo": "League of legends", 
+        "tamanio": "9 x 8 x 8",
+        "precio": 700, 
+        "stock": 15
+    },
+    {
+        "id": 8, 
+        "tipo": "Cartas", 
+        "nombre": "pokemon evolving skies", 
+        "universo": "Pokemon", 
+        "tamanio": "12 x 7 x 2",
+        "precio": 150, 
+        "stock": 7
+    },
+    {
+        "id": 9, 
+        "tipo": "juguete", 
+        "nombre": "cubo Rubik 3x3x3", 
+        "universo": "Rubik", 
+        "tamanio": "6 x 6 x 6",
+        "precio": 600, 
+        "stock": 5
+    }
+]
