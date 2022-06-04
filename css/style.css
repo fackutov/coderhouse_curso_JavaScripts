@@ -1,55 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,200;1,300&family=Patrick+Hand&display=swap");
 * {
   margin: 0;
   padding: 0;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: coral;
 }
 
 html {
   height: 100%;
 }
 html .body {
-  background-color: #b4a98f;
   display: grid;
   grid-template: "header " 100px "navbar " 100px "main " auto "footer " 150px/auto;
+  height: 100vh;
 }
 html .body main {
   grid-area: main;
+  background-color: #d8fdf1;
 }
 html .body main .divProductosClass {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   padding: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
   flex-wrap: wrap;
 }
 html .body main .divProductosClass .producto {
   width: 250px;
-  background-color: #b9ad93;
+  background-color: #67c2a767;
   padding: 8px;
   margin: 5px;
-}
-html .body main .divProductosClass .producto p {
-  text-align: center;
-  font-size: 20px;
-  padding: 5px;
-}
-html .body main .divProductosClass .producto .nombreProd {
-  font-size: 25px;
-  color: #ffffff;
-  font-family: monospace;
+  border-radius: 15px;
 }
 html .body main .divProductosClass .producto img {
   width: 250px;
   height: 250px;
   border-radius: 15px;
 }
+html .body main .divProductosClass .producto .nombreProd {
+  font-size: 25px;
+  color: #2b97fd;
+  font-family: monospace;
+}
+html .body main .divProductosClass .producto p {
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  font-family: var(--font-patrickHand);
+}
 html .body main .divProductosClass .producto .botonCompra {
   width: 60%;
-  background-color: #ffd447;
+  background-color: #2b97fd;
   color: #ffffff;
+  font-family: var(--font-monserrat);
   padding: 10px;
   border-radius: 15px;
   border: 0px;
@@ -57,18 +60,58 @@ html .body main .divProductosClass .producto .botonCompra {
   margin-right: 20%;
 }
 html .body main .divProductosClass .producto .botonCompra:hover {
-  background-color: #f8e7ae;
-  color: black;
+  background-color: #ffffff;
+  color: #2b97fd;
 }
 html .body main .divCarrito {
-  background-color: #ffffff;
   padding: 30px;
   text-align: center;
+}
+html .body main .divCarrito h2 {
+  font-family: var(--font-monserrat);
+  font-size: 36px;
+  color: #2b97fd;
 }
 html .body main .divCarrito .infoCarrito {
   padding: 15px;
   margin-right: 20%;
   text-align: end;
+  align-items: flex-end;
+  padding-bottom: 0px;
+}
+html .body main .divCarrito .infoCarrito .totalCarrito {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+html .body main .divCarrito .infoCarrito .totalCarrito p {
+  font-family: var(--font-monserrat);
+  font-size: 16px;
+  margin: 10px;
+}
+html .body main .divCarrito .infoCarrito .totalCarrito button {
+  font-family: var(--font-patrickHand);
+  font-size: 16px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #2b97fd;
+  padding: 10px;
+}
+html .body main .divCarrito .infoCarrito .totalCarrito button:hover {
+  transform: scale(0.9);
+  color: #ffffff;
+}
+html .body main .divCarrito .infoCarrito button {
+  font-family: var(--font-patrickHand);
+  font-size: 16px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #2b97fd;
+  padding: 10px;
+}
+html .body main .divCarrito .infoCarrito button:hover {
+  transform: scale(0.9);
+  color: #ffffff;
 }
 html .body main .divCarrito .divCarritoClass {
   display: flex;
@@ -78,42 +121,65 @@ html .body main .divCarrito .divCarritoClass {
 html .body main .divCarrito .divCarritoClass .prodCarrito {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 5px;
-  background-color: aquamarine;
+  background-color: #b5ebda;
   border-radius: 15px;
   margin: 10px;
   margin-left: 20%;
   margin-right: 20%;
 }
-html .body main .divCarrito .divCarritoClass .prodCarrito p {
-  padding: 2px;
-}
 html .body main .divCarrito .divCarritoClass .prodCarrito .imgProd {
   width: 150px;
   height: 150px;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito .pInfo {
+  padding: 7%;
+  font-family: var(--font-patrickHand);
+  font-size: 36px;
+  color: #2b97fd;
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito p {
+  padding: 5px;
+  font-family: var(--font-patrickHand);
+  font-size: 20px;
+  color: #2b97fd;
 }
 html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra {
   display: flex;
   flex-direction: column;
 }
+html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra button {
+  margin: 5px;
+  border: 0px;
+  background-color: #b5ebda;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #2b97fd;
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra button img {
+  width: 35px;
+  height: 50px;
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra button img:hover {
+  transform: scale(1.2);
+}
+html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra .botonCompra:hover {
+  transform: scale(1.2);
+}
 
 .body header {
+  display: flex;
+  justify-content: center;
   grid-area: header;
-  background-color: aquamarine;
+  background-color: #8bdfdf;
   height: 120px;
-}
-.body header p {
-  text-align: center;
-  padding: 20px;
-  font-size: 60px;
-  color: #9e2f2f;
 }
 .body .navbar {
   grid-area: navbar;
-  background-color: aquamarine;
+  background-color: #8bdfdf;
   padding: 25px;
 }
 .body .navbar .navegacion {
@@ -122,20 +188,26 @@ html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra {
 }
 .body .navbar .navegacion .botones {
   display: flex;
-  padding-left: 250px;
+  padding-left: 300px;
   align-items: center;
-  margin-left: 200px;
+  margin-left: 180px;
 }
 .body .navbar .navegacion .botones .boton {
   padding: 5px;
-  color: #1a9ef7;
+  color: #b3ddf8;
+  background-color: #2b97fd;
   border: 0;
   border-radius: 10px;
   font-size: 18px;
-  margin: 10px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .body .navbar .navegacion .botones .boton:hover {
-  color: #3b3bff;
+  color: #000000;
+  transform: scale(0.9);
 }
 .body .navbar .navegacion .carrito {
   display: flex;
@@ -145,6 +217,7 @@ html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra {
   border: 2px solid #8bdfdf;
   padding: 0px 10px 0px 10px;
   align-items: center;
+  margin-top: 20px;
 }
 .body .navbar .navegacion .carrito:hover {
   border: 2px solid #5f787c;
@@ -154,13 +227,38 @@ html .body main .divCarrito .divCarritoClass .prodCarrito .btnCompra {
   background-image: url(../../multimedia/imagenes/iconos/carrito.png);
   background-size: cover;
   background-position: center;
-  background-color: aquamarine;
   border: 0;
   width: 30px;
   height: 40px;
 }
 .body .navbar .navegacion .carrito h2 {
   padding-left: 5px;
+}
+
+.body .footer {
+  grid-area: footer;
+  background-color: #417979;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--font-monserrat);
+  color: #ffffff;
+  font-size: 24px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+.body .footer div {
+  padding-left: 15px;
+}
+.body .footer div a .logoRRSS {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+:root {
+  --font-patrickHand: "Patrick Hand", cursive;
+  --font-monserrat: "Montserrat", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

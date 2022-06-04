@@ -1,0 +1,25 @@
+
+.body{
+    .footer{
+        grid-area: footer;
+        background-color: #417979;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: var(--font-monserrat);
+        color: #ffffff;
+        font-size: 24px;
+        padding-right: 100px;
+        padding-left: 100px;
+        div{
+            padding-left: 15px;
+            a{
+                .logoRRSS{
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

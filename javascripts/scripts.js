@@ -159,11 +159,11 @@ function mostrarCarrito(){  //muestra todos los productos del carrito
         <div class="divCarrito" id="carrito">
             <h2>Carrito de compras</h2>
             <div class="infoCarrito">
-                <div id="totalCarrito">
-                    <p>El total de su compra es ${totalCompra()}</p>
-                    <button onclick='comprarTodo()'>Comprar todo</button>
+                <div id="totalCarrito" class="totalCarrito">
+                    <p>El total de su compra es: $${totalCompra()}</p>
+                    <button onclick='comprarTodo()'> Comprar todo </button>
                 </div>
-                <button onclick='eliminarCarrito()'>Eliminar todos los articulos</button> 
+                <button onclick='eliminarCarrito()'> Eliminar todos los articulos </button> 
             </div>
             <div id="divCarrito" class="divCarritoClass"></div>
         </div>
@@ -180,15 +180,15 @@ function mostrarCarrito(){  //muestra todos los productos del carrito
                         <img class='imgProd' src='../multimedia/imagenes/productos/prod${prod.id}.jpg'>
                     </div>
                     <div>
-                        <p class="nombreProd">${prod.nombre}</p>
-                        <P class="universoProd">${prod.universo}</P>
-                        <P class="medidasProd">medidas <br>${prod.tamanio}</P>
+                        <p>${prod.nombre}</p>
+                        <P>${prod.universo}</P>
+                        <P>medidas <br>${prod.tamanio}</P>
                     </div>
                     <div>
                         <p class="precioProd">$ ${prod.precio}</p>
                     </div>
                     <div class='btnCompra'>
-                        <button onclick=eliminarProdCarrito(${prod.id})>X</button>
+                        <button onclick=eliminarProdCarrito(${prod.id})><img src='../multimedia/imagenes/iconos/logoeliminar.png'/></button>
                         <button onclick='comprar(${prod.id})' class='botonCompra'>Comprar</button>
                     </div>       
                 </div>     
@@ -200,13 +200,12 @@ function mostrarCarrito(){  //muestra todos los productos del carrito
                 <h2>Carrito de compras</h2>            
                 <div id="divCarrito" class="divCarritoClass">
                     <div class="prodCarrito">
-                        <p>No hay productos en el carrito</p>
+                        <p class="pInfo">No hay productos en el carrito</p>
                     </div>
                 </div>
             </div>    
         ` 
     }
-    totalCompra()
 }
 
 function agregarStorage (){ // recolecta el array de carrito del local storage o en su defecto lo crea
@@ -228,13 +227,13 @@ function agregar(idprod){ //agrego un nuevo producto a la array del carrito y la
         guardarStorage(carrito)
         Toastify({
             text: "agregado correctamente",
-            duration: 3000,
+            duration: 4000,
             close: true,
             gravity: "top",
             position: "right",
             stopOnFocus: true,
             style: {
-            background: "linear-gradient(to right, #00b09b, #96c93d)",
+            background: "linear-gradient(to right, #6ca2db, #006cdf)",
             },
         }).showToast();
         agregarNum(carrito)
@@ -242,12 +241,26 @@ function agregar(idprod){ //agrego un nuevo producto a la array del carrito y la
 
 }
 
-function comprar(){ // la funcion de compra solo lanza una pequeña alerta ya que no pasa por todo el tramite de pago
+function comprar(idProd){ // imito la funcion eliminar prod del carrito al darle al boton de comprar para quitar un producto del carrito, ya que este proceso no pasa por todo el tramite de venta, en su lugar solo lanza una alerta de sweetalert alegando la compra
 
-    Swal.fire({
-        icon: 'sucess',
-        title: 'Gracias por su preferencia',
-      })
+    let lista = JSON.parse(localStorage.getItem('carrito'))
+    let enumerar = [] 
+
+    lista.forEach(prod => { 
+        enumerar.push(1) 
+        let largoenumerar = enumerar.length 
+
+        if (prod.id == idProd){ 
+            lista.splice(largoenumerar -1, 1)
+            Swal.fire({
+                icon: 'success',
+                title: 'Gracias por su preferencia',
+            })
+        }
+    })
+
+    localStorage.setItem('carrito', JSON.stringify(lista))
+    mostrarCarrito()
 }
 
 function comprarTodo(){ // compra todo los productos del carrito
@@ -281,13 +294,13 @@ function eliminarProdCarrito(idProd){ // elimino un unico producto del carrito a
             lista.splice(largoenumerar -1, 1) // elimino el producto que esta en la ultima posicion generada cuando se dio la condicion (si tengo 10 prod en el carrito y quiero eliminar el 5to esta funcion iterara 5 veces y eliminara el producto que se encuentra en la posicion 5 del array que traigo de local storage)
             Toastify({ //alerta de eliminacion
                 text: "Producto eliminado correctamente",
-                duration: 3000,
+                duration: 4000,
                 close: true,
                 gravity: "top",
                 position: "right",
                 stopOnFocus: true,
                 style: {
-                  background: "linear-gradient(to right, #00b09b, #96c93d)",
+                  background: "linear-gradient(to right, #6ca2db, #006cdf)",
                 },
               }).showToast();
         }
