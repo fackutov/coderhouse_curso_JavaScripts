@@ -21,7 +21,7 @@ fetch('javascripts/productos.json') // muestra todos los productos al iniciar la
     productos.forEach(prod => {
         divProductos.innerHTML += `
             <div id=producto${prod.id} class="producto">
-                <img src='../multimedia/imagenes/productos/prod${prod.id}.jpg'>
+                <img src='multimedia/imagenes/productos/prod${prod.id}.jpg'>
                 <p class="nombreProd">${prod.nombre}</p>
                 <P class="universoProd">${prod.universo}</P>
                 <P class="medidasProd">medidas <br>${prod.tamanio}</P>
@@ -44,7 +44,7 @@ fetch('javascripts/productos.json') // muestra todos los productos al pulsar el 
         productos.forEach(prod => {
             divProductos.innerHTML += `       
                 <div id=producto${prod.id} class="producto">
-                    <img src='../multimedia/imagenes/productos/prod${prod.id}.jpg'>
+                    <img src='multimedia/imagenes/productos/prod${prod.id}.jpg'>
                     <p class="nombreProd">${prod.nombre}</p>
                     <P class="universoProd">${prod.universo}</P>
                     <P class="medidasProd">medidas <br>${prod.tamanio}</P>
@@ -69,7 +69,7 @@ fetch('javascripts/productos.json') // muestra todos los productos cuyo universo
         listaProductos.forEach(prod => {
             divProductos.innerHTML += `
                 <div id=producto${prod.id} class="producto">
-                    <img src='../multimedia/imagenes/productos/prod${prod.id}.jpg'>
+                    <img src='multimedia/imagenes/productos/prod${prod.id}.jpg'>
                     <p class="nombreProd">${prod.nombre}</p>
                     <P class="universoProd">${prod.universo}</P>
                     <P class="medidasProd">medidas <br>${prod.tamanio}</P>
@@ -93,7 +93,7 @@ fetch('javascripts/productos.json') // muestra todos los productos cuyo universo
         listaProductos.forEach(prod => {
             divProductos.innerHTML += `
                 <div id=producto${prod.id} class="producto">
-                    <img src='../multimedia/imagenes/productos/prod${prod.id}.jpg'>
+                    <img src='multimedia/imagenes/productos/prod${prod.id}.jpg'>
                     <p class="nombreProd">${prod.nombre}</p>
                     <P class="universoProd">${prod.universo}</P>
                     <P class="medidasProd">medidas <br>${prod.tamanio}</P>
@@ -118,7 +118,7 @@ fetch('javascripts/productos.json') // muestra todos los productos cuyo universo
         listaProductos.forEach(prod => {
             divProductos.innerHTML += `
                 <div id=producto${prod.id} class="producto">
-                    <img src='../multimedia/imagenes/productos/prod${prod.id}.jpg'>
+                    <img src='multimedia/imagenes/productos/prod${prod.id}.jpg'>
                     <p class="nombreProd">${prod.nombre}</p>
                     <P class="universoProd">${prod.universo}</P>
                     <P class="medidasProd">medidas <br>${prod.tamanio}</P>
@@ -177,7 +177,7 @@ function mostrarCarrito(){  //muestra todos los productos del carrito
 
                 <div id=producto${prod.id} class="prodCarrito">
                     <div>
-                        <img class='imgProd' src='../multimedia/imagenes/productos/prod${prod.id}.jpg'>
+                        <img class='imgProd' src='multimedia/imagenes/productos/prod${prod.id}.jpg'>
                     </div>
                     <div>
                         <p>${prod.nombre}</p>
