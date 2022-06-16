@@ -188,7 +188,7 @@ function mostrarCarrito(){  //muestra todos los productos del carrito
                         <p class="precioProd">$ ${prod.precio}</p>
                     </div>
                     <div class='btnCompra'>
-                        <button onclick=eliminarProdCarrito(${prod.id})><img src='../multimedia/imagenes/iconos/logoeliminar.png'/></button>
+                        <button onclick=eliminarProdCarrito(${prod.id})><img src='multimedia/imagenes/iconos/logoeliminar.png'/></button>
                         <button onclick='comprar(${prod.id})' class='botonCompra'>Comprar</button>
                     </div>       
                 </div>     
